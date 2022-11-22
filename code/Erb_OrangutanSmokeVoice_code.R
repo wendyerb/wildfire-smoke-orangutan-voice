@@ -52,7 +52,6 @@ simulationOutput=simulateResiduals(fittedModel=fittedModel)
 plot(simulationOutput)
 MuMIn::r.squaredGLMM(glmer(BP.01 ~ Period + (1 | Male.ID), family = binomial(link = "logit"),  data = nlp_PreSmo))
 
-
 ## Code for jittered boxplots
 nlc.smoke <- ggplot(PreSmo_Ncall, aes(x = Period, y = N.LC)) +
   geom_boxplot(varwidth = FALSE, outlier.color = NA) +
